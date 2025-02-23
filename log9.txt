@@ -1,0 +1,906 @@
+Program id: 1
+ExeStack: Ref int a
+new(a, 20)
+int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: new(a, 20)
+int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: new(a, 20)
+int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: new(a, 20)
+int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: new(a, 20)
+int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int v
+for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: for(v=0;v<3;v=v+1){fork((print(v); v=v*rH(a)))}
+print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: 
+SymTable: 
+a=(1, int)
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(v)
+v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(v)
+v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=1
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: 
+SymTable: 
+a=(1, int)
+v=20
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(v)
+v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(v)
+v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=3
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=3
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=3
+
+Out: [0, 1, 2]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1, 2]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(rH(a))
+
+SymTable: 
+a=(1, int)
+v=3
+
+Out: [0, 1, 2]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: v=v*rH(a)
+
+SymTable: 
+a=(1, int)
+v=2
+
+Out: [0, 1, 2]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: 
+SymTable: 
+a=(1, int)
+v=3
+
+Out: [0, 1, 2, 20]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: 
+SymTable: 
+a=(1, int)
+v=40
+
+Out: [0, 1, 2, 20]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------

@@ -1,0 +1,268 @@
+Program id: 2
+ExeStack: bool a
+int v
+a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: int v
+a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: int v
+a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: int v
+a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: int v
+a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: a=true
+(IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: (IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: (IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=false
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: (IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=true
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: (IF(a) THEN(v=2)ELSE(v=3))
+print(v)
+
+SymTable: 
+a=true
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+
+SymTable: 
+a=true
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+
+SymTable: 
+a=true
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+
+SymTable: 
+a=true
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+
+SymTable: 
+a=true
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+
+SymTable: 
+a=true
+v=2
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: print(v)
+
+SymTable: 
+a=true
+v=2
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: 
+SymTable: 
+a=true
+v=2
+
+Out: [2]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 2
+ExeStack: 
+SymTable: 
+a=true
+v=2
+
+Out: [2]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------

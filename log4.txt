@@ -1,0 +1,316 @@
+Program id: 3
+ExeStack: Ref int v
+new(v, 20)
+Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(v, 20)
+Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(v, 20)
+Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(v, 20)
+Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(v, 20)
+Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: Ref Ref int a
+new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+a=(0, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: new(a, v)
+print(v)
+print(a)
+
+SymTable: 
+a=(0, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(v)
+print(a)
+
+SymTable: 
+a=(0, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(v)
+print(a)
+
+SymTable: 
+a=(0, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(v)
+print(a)
+
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(v)
+print(a)
+
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(a)
+
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(a)
+
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(a)
+
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: [(1, int)]
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: print(a)
+
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: [(1, int)]
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------
+Program id: 3
+ExeStack: 
+SymTable: 
+a=(2, Ref int)
+v=(1, int)
+
+Out: [(1, int), (2, Ref int)]
+FileTable: 
+Heap:
+1(int):-> 20
+2(Ref int):-> (1, int)
+
+-----------------------------------------------------------------------------------

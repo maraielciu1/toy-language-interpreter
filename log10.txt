@@ -1,0 +1,395 @@
+Program id: 6
+ExeStack: int v
+for(v=0;v<3;v=v+1){(print(v); v=v*3)}
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: for(v=0;v<3;v=v+1){(print(v); v=v*3)}
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: for(v=0;v<3;v=v+1){(print(v); v=v*3)}
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: for(v=0;v<3;v=v+1){(print(v); v=v*3)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: for(v=0;v<3;v=v+1){(print(v); v=v*3)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: v=0
+while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: v=0
+while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=0
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=1
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=3
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=3
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=4
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: while(v < 3) {((print(v); v=v*3); v=v+1)}
+
+SymTable: 
+v=4
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 6
+ExeStack: 
+SymTable: 
+v=4
+
+Out: [0, 1]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------

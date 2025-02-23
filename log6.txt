@@ -1,0 +1,233 @@
+Program id: 4
+ExeStack: Ref int v
+new(v, 20)
+print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: new(v, 20)
+print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: new(v, 20)
+print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: new(v, 20)
+print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: new(v, 20)
+print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(0, int)
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v))
+writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: []
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: [20]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: writeHeap(v, 30)
+print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: [20]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: [20]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: [20]
+FileTable: 
+Heap:
+1(int):-> 20
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: [20]
+FileTable: 
+Heap:
+1(int):-> 30
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: print(rH(v)+5)
+
+SymTable: 
+v=(1, int)
+
+Out: [20]
+FileTable: 
+Heap:
+1(int):-> 30
+
+-----------------------------------------------------------------------------------
+Program id: 4
+ExeStack: 
+SymTable: 
+v=(1, int)
+
+Out: [20, 35]
+FileTable: 
+Heap:
+1(int):-> 30
+
+-----------------------------------------------------------------------------------

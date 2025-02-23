@@ -1,0 +1,531 @@
+Program id: 1
+ExeStack: string varf
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: OpenRFile(varf)
+int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: int varc
+ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=0
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=0
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=0
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=0
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: []
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: ReadFile(varf, varc)
+print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=10
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: print(varc)
+CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10, 50]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: CloseRFile(varf)
+
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10, 50]
+FileTable: 
+/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+Heap:
+
+-----------------------------------------------------------------------------------
+Program id: 1
+ExeStack: 
+SymTable: 
+varf=/Users/maraielciu/Desktop/map_projects/toy_language_interpreter copy/src/View/test.in
+varc=50
+
+Out: [10, 50]
+FileTable: 
+Heap:
+
+-----------------------------------------------------------------------------------
