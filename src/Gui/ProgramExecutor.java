@@ -7,6 +7,7 @@ import Model.Value.StringValue;
 import Model.Value.Value;
 import Utils.ADT.MyException;
 import Utils.ADT.MyIDictionary;
+import Utils.State.IBarrierTable;
 import Utils.State.IHeap;
 import Utils.State.MySymTbl;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -71,6 +72,20 @@ public class ProgramExecutor {
     @FXML
     private Button runOneStepButton;
 
+    @FXML
+    private TableView<Pair<Integer, Pair<Integer, List<Integer>>>> barrierTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, List<Integer>>>, Integer> barrierLocationColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, List<Integer>>>, Integer> barrierValueColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, List<Integer>>>, String> barrierListColumn;
+
+
+
     private PrgState getCurrentProgramState(){
         if(controller.getProgramStates().isEmpty())
             return null;
@@ -95,6 +110,9 @@ public class ProgramExecutor {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        barrierLocationColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().first).asObject());
+        barrierValueColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().second.first).asObject());
+        barrierListColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.second.toString()));
     }
 
     public void populate(){
@@ -105,8 +123,18 @@ public class ProgramExecutor {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateBarrierTableView();
     }
 
+    public void populateBarrierTableView(){
+        PrgState programState = getCurrentProgramState();
+        IBarrierTable barrierTable = Objects.requireNonNull(programState).getBarrierTbl();
+        ArrayList<Pair<Integer, Pair<Integer, List<Integer>>>> barrierTableEntries = new ArrayList<>();
+            for(Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>> entry: barrierTable.getContent().entrySet()) {
+            barrierTableEntries.add(new Pair<>(entry.getKey(), new Pair<>(entry.getValue().getKey(), entry.getValue().getValue())));
+        }
+            barrierTableView.setItems(FXCollections.observableArrayList(barrierTableEntries));
+    }
     public void populateNumberProgramStates() {
         noOfPrgStates.setText(String.valueOf(controller.getProgramStates().size()));
     }

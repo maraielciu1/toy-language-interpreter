@@ -31,6 +31,8 @@ public class PrgState {
         return originalProgram;
     }
 
+    public IBarrierTable getBarrierTbl(){return barrierTable;}
+
     public void setExeStack(IMyExeStack exeStack) { this.exeStack = exeStack; }
 
     private IMyExeStack exeStack;
@@ -39,6 +41,7 @@ public class PrgState {
     private IStmt originalProgram;
     private IMyFileTbl fileTable;
     private IHeap heap;
+    private IBarrierTable barrierTable;
 
     public int getId() {
         return id;
@@ -47,7 +50,7 @@ public class PrgState {
     static int nextId=0;
     int id;
 
-    public PrgState(IMyExeStack stk, IMySymTbl symtbl,IMyFileTbl filetbl, IHeap hp,IMyOut ot, IStmt prg) {
+    public PrgState(IMyExeStack stk, IMySymTbl symtbl,IMyFileTbl filetbl, IHeap hp,IMyOut ot,IBarrierTable btbl, IStmt prg) {
         exeStack = stk;
         id=this.nextId();
         symTable = symtbl;
@@ -56,11 +59,16 @@ public class PrgState {
         heap = hp;
         originalProgram = prg;
         stk.push(prg);
+        barrierTable=btbl;
     }
 
     @Override
     public String toString() {
-        return "Program id: "+ id +"\n"+"ExeStack: " + distinctStatamentsString() + "\nSymTable: " + symTable.toString() + "\nOut: " + out.toString() + "\nFileTable: "+fileTable.getFileTableList() + heap.toString();
+        try {
+            return "Program id: "+ id +"\n"+"ExeStack: " + distinctStatamentsString() + "\nSymTable: " + symTable.toString() + "\nOut: " + out.toString() + "\nFileTable: "+fileTable.getFileTableList() + heap.toString()+barrierTableToString();
+        } catch (MyException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public IMyFileTbl getFileTable() {
@@ -121,5 +129,17 @@ public class PrgState {
     static synchronized int nextId(){
         nextId++;
         return nextId;
+    }
+
+    public String barrierTableToString() throws MyException {
+        StringBuilder barrierTableStringBuilder = new StringBuilder();
+        barrierTableStringBuilder.append("\nBarrierTable: ");
+        for (int key: barrierTable.keySet()) {
+            barrierTableStringBuilder.append(String.format("%d -> %d: ", key, barrierTable.lookUp(key).getKey()));
+            for (int value: barrierTable.lookUp(key).getValue())
+                barrierTableStringBuilder.append(String.format("%d ", value));
+        }
+        barrierTableStringBuilder.append("\n");
+        return barrierTableStringBuilder.toString();
     }
 }

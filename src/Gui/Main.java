@@ -20,7 +20,7 @@ public class Main extends Application {
         FXMLLoader programLoader = new FXMLLoader();
         programLoader.setLocation(Main.class.getResource("ProgramChooser.fxml"));
         Parent root = programLoader.load();
-        Scene scene = new Scene(root, 800, 500);
+        Scene scene = new Scene(root, 1000, 800);
         ProgramChooser programChooser = programLoader.getController();
         primaryStage.setTitle("Select a program to run");
         primaryStage.setScene(scene);
@@ -29,7 +29,7 @@ public class Main extends Application {
         FXMLLoader programExecutorLoader = new FXMLLoader();
         programExecutorLoader.setLocation(Main.class.getResource("ProgramExecutor.fxml"));
         Parent root2 = programExecutorLoader.load();
-        Scene scene2 = new Scene(root2, 800, 500);
+        Scene scene2 = new Scene(root2, 1000, 800);
         ProgramExecutor programExecutor = programExecutorLoader.getController();
         programChooser.setProgramExecutor(programExecutor);
         Stage stage2 = new Stage();
