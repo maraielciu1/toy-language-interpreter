@@ -217,6 +217,86 @@ public class ProgramChooser {
                         new CompStmt( new PrintStmt(new VarExp("v")), new AssignStmt("v", new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(3)))))  // Print v
                 ));
         allPrgs.add(ex11);
+
+        //Ref int v1; int cnt; new(v1,1);createSemaphore(cnt,rH(v1));
+        // fork(acquire(cnt);wh(v1,rh(v1)*10));print(rh(v1));release(cnt));
+        // fork(acquire(cnt);wh(v1,rh(v1)*10));wh(v1,rh(v1)*2));print(rh(v1));release(cnt ));
+        // acquire(cnt); print(rh(v1)-1); release(cnt)
+        IStmt ex12 = new CompStmt(
+                new VarDeclStmt("v1", new RefType(new IntType())),  // Ref int v1
+                new CompStmt(
+                        new VarDeclStmt("cnt", new IntType()),  // int cnt
+                        new CompStmt(
+                                new NewStmt("v1", new ValueExp(new IntValue(1))),  // new(v1, 1)
+                                new CompStmt(
+                                        new NewSemaphoreStmt("cnt", new ReadHeapExp(new VarExp("v1"))),  // createSemaphore(cnt, rH(v1))
+                                        new CompStmt(
+                                                new ForkStmt(  // fork 1: acquire, multiply v1 by 10, print, release
+                                                        new CompStmt(
+                                                                new AquireSemStmt("cnt"),
+                                                                new CompStmt(
+                                                                        new WriteHeapStmt(
+                                                                                new VarExp("v1"),
+                                                                                new ArithExp('*',
+                                                                                        new ReadHeapExp(new VarExp("v1")),
+                                                                                        new ValueExp(new IntValue(10))
+                                                                                )
+                                                                        ),
+                                                                        new CompStmt(
+                                                                                new PrintStmt(new ReadHeapExp(new VarExp("v1"))),
+                                                                                new ReleaseSemStmt("cnt")
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompStmt(
+                                                        new ForkStmt(  // fork 2: acquire, multiply v1 by 10, multiply by 2, print, release
+                                                                new CompStmt(
+                                                                        new AquireSemStmt("cnt"),
+                                                                        new CompStmt(
+                                                                                new WriteHeapStmt(
+                                                                                        new VarExp("v1"),
+                                                                                        new ArithExp('*',
+                                                                                                new ReadHeapExp(new VarExp("v1")),
+                                                                                                new ValueExp(new IntValue(10))
+                                                                                        )
+                                                                                ),
+                                                                                new CompStmt(
+                                                                                        new WriteHeapStmt(
+                                                                                                new VarExp("v1"),
+                                                                                                new ArithExp('*',
+                                                                                                        new ReadHeapExp(new VarExp("v1")),
+                                                                                                        new ValueExp(new IntValue(2))
+                                                                                                )
+                                                                                        ),
+                                                                                        new CompStmt(
+                                                                                                new PrintStmt(new ReadHeapExp(new VarExp("v1"))),
+                                                                                                new ReleaseSemStmt("cnt")
+                                                                                        )
+                                                                                )
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompStmt(  // main thread: acquire, print v1 - 1, release
+                                                                new AquireSemStmt("cnt"),
+                                                                new CompStmt(
+                                                                        new PrintStmt(
+                                                                                new ArithExp('-',
+                                                                                        new ReadHeapExp(new VarExp("v1")),
+                                                                                        new ValueExp(new IntValue(1))
+                                                                                )
+                                                                        ),
+                                                                        new ReleaseSemStmt("cnt")
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+
+        allPrgs.add(ex12);
         return FXCollections.observableArrayList(allPrgs);
     }
 
@@ -243,7 +323,7 @@ public class ProgramChooser {
             int id=programListView.getSelectionModel().getSelectedIndex();
             try{
                 selectedProgram.typeCheck(new Utils.ADT.MyDictionary<>());
-                PrgState prgState = new PrgState(new MyExeStack(), new MySymTbl(), new MyFileTbl(), new Heap(), new MyOut(), selectedProgram);
+                PrgState prgState = new PrgState(new MyExeStack(), new MySymTbl(), new MyFileTbl(), new Heap(), new MyOut(), new SemaphoreTable(), selectedProgram);
                 IRepository repo = new Repository(prgState, "log"+id+".txt");
                 Controller controller = new Controller(repo);
                 programExecutor.setController(controller);
