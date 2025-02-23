@@ -8,6 +8,7 @@ import Model.Value.Value;
 import Utils.ADT.MyException;
 import Utils.ADT.MyIDictionary;
 import Utils.State.IHeap;
+import Utils.State.ILockTable;
 import Utils.State.MySymTbl;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -69,6 +70,15 @@ public class ProgramExecutor {
     private ListView<String> exeStackListView;
 
     @FXML
+    private TableView<Pair<Integer, Integer>> lockTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, String> locationColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, String> lockValueColumn;
+
+    @FXML
     private Button runOneStepButton;
 
     private PrgState getCurrentProgramState(){
@@ -95,6 +105,8 @@ public class ProgramExecutor {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        locationColumn.setCellValueFactory(p->new SimpleStringProperty(p.getValue().first.toString()));
+        lockValueColumn.setCellValueFactory(p->new SimpleStringProperty(p.getValue().second.toString()));
     }
 
     public void populate(){
@@ -105,6 +117,16 @@ public class ProgramExecutor {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateLockTableView();
+    }
+
+    private void populateLockTableView() {
+        PrgState prgState = getCurrentProgramState();
+        ILockTable lockTable = Objects.requireNonNull(prgState).getLockTable();
+        ArrayList<Pair<Integer, Integer>> lockTableEntries = new ArrayList<>();
+        for(Map.Entry<Integer, Integer> entry: lockTable.getContent().entrySet())
+            lockTableEntries.add(new Pair<>(entry.getKey(), entry.getValue()));
+        lockTableView.setItems(FXCollections.observableArrayList(lockTableEntries));
     }
 
     public void populateNumberProgramStates() {

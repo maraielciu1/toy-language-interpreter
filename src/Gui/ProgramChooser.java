@@ -217,6 +217,127 @@ public class ProgramChooser {
                         new CompStmt( new PrintStmt(new VarExp("v")), new AssignStmt("v", new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(3)))))  // Print v
                 ));
         allPrgs.add(ex11);
+
+        //Ref int v1; Ref int v2; int x; int q; new(v1,20);new(v2,30);newLock(x);
+        // fork( fork( lock(x);wh(v1,rh(v1)-1);unlock(x) ); lock(x);wh(v1,rh(v1)*10);unlock(x) );newLock(q);
+        // fork( fork(lock(q);wh(v2,rh(v2)+5);unlock(q)); lock(q);wh(v2,rh(v2)*10);unlock(q) );
+        // nop;nop;nop;nop; lock(x); print(rh(v1)); unlock(x); lock(q); print(rh(v2)); unlock(q);
+        IStmt ex12 = new CompStmt(
+                new VarDeclStmt("v1", new RefType(new IntType())),
+                new CompStmt(
+                        new VarDeclStmt("v2", new RefType(new IntType())),
+                        new CompStmt(
+                                new VarDeclStmt("x", new IntType()),
+                                new CompStmt(
+                                        new VarDeclStmt("q", new IntType()),
+                                        new CompStmt(
+                                                new NewStmt("v1", new ValueExp(new IntValue(20))),
+                                                new CompStmt(
+                                                        new NewStmt("v2", new ValueExp(new IntValue(30))),
+                                                        new CompStmt(
+                                                                new NewLockStmt("x"),
+                                                                new CompStmt(
+                                                                        new ForkStmt(
+                                                                                new CompStmt(
+                                                                                        new ForkStmt(
+                                                                                                new CompStmt(
+                                                                                                        new LockStmt("x"),
+                                                                                                        new CompStmt(
+                                                                                                                new WriteHeapStmt(new VarExp("v1"),
+                                                                                                                        new ArithExp('-',
+                                                                                                                                new ReadHeapExp(new VarExp("v1")),
+                                                                                                                                new ValueExp(new IntValue(1)))
+                                                                                                                ),
+                                                                                                                new UnlockStmt("x")
+                                                                                                        )
+                                                                                                )
+                                                                                        ),
+                                                                                        new CompStmt(
+                                                                                                new LockStmt("x"),
+                                                                                                new CompStmt(
+                                                                                                        new WriteHeapStmt(new VarExp("v1"),
+                                                                                                                new ArithExp('*',
+                                                                                                                        new ReadHeapExp(new VarExp("v1")),
+                                                                                                                        new ValueExp(new IntValue(10))
+                                                                                                                )
+                                                                                                        ),
+                                                                                                        new UnlockStmt("x")
+                                                                                                )
+                                                                                        )
+                                                                                )
+                                                                        ),
+                                                                        new CompStmt(
+                                                                                new NewLockStmt("q"),
+                                                                                new CompStmt(
+                                                                                        new ForkStmt(
+                                                                                                new CompStmt(
+                                                                                                        new ForkStmt(
+                                                                                                                new CompStmt(
+                                                                                                                        new LockStmt("q"),
+                                                                                                                        new CompStmt(
+                                                                                                                                new WriteHeapStmt(new VarExp("v2"),
+                                                                                                                                        new ArithExp('+',
+                                                                                                                                                new ReadHeapExp(new VarExp("v2")),
+                                                                                                                                                new ValueExp(new IntValue(5))
+                                                                                                                                        )
+                                                                                                                                ),
+                                                                                                                                new UnlockStmt("q")
+                                                                                                                        )
+                                                                                                                )
+                                                                                                        ),
+                                                                                                        new CompStmt(
+                                                                                                                new LockStmt("q"),
+                                                                                                                new CompStmt(
+                                                                                                                        new WriteHeapStmt(new VarExp("v2"),
+                                                                                                                                new ArithExp('*',
+                                                                                                                                        new ReadHeapExp(new VarExp("v2")),
+                                                                                                                                        new ValueExp(new IntValue(10))
+                                                                                                                                )
+                                                                                                                        ),
+                                                                                                                        new UnlockStmt("q")
+                                                                                                                )
+                                                                                                        )
+                                                                                                )
+                                                                                        ),
+                                                                                        new CompStmt(
+                                                                                                new NopStmt(),
+                                                                                                new CompStmt(
+                                                                                                        new NopStmt(),
+                                                                                                        new CompStmt(
+                                                                                                                new NopStmt(),
+                                                                                                                new CompStmt(
+                                                                                                                        new NopStmt(),
+                                                                                                                        new CompStmt(
+                                                                                                                                new LockStmt("x"),
+                                                                                                                                new CompStmt(
+                                                                                                                                        new PrintStmt(new ReadHeapExp(new VarExp("v1"))),
+                                                                                                                                        new CompStmt(
+                                                                                                                                                new UnlockStmt("x"),
+                                                                                                                                                new CompStmt(
+                                                                                                                                                        new LockStmt("q"),
+                                                                                                                                                        new CompStmt(
+                                                                                                                                                                new PrintStmt(new ReadHeapExp(new VarExp("v2"))),
+                                                                                                                                                                new UnlockStmt("q")
+                                                                                                                                                        )
+                                                                                                                                                )
+                                                                                                                                        )
+                                                                                                                                )
+                                                                                                                        )
+                                                                                                                )
+                                                                                                        )
+                                                                                                )
+                                                                                        )
+                                                                                )
+                                                                        )
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+        allPrgs.add(ex12);
         return FXCollections.observableArrayList(allPrgs);
     }
 
@@ -243,7 +364,7 @@ public class ProgramChooser {
             int id=programListView.getSelectionModel().getSelectedIndex();
             try{
                 selectedProgram.typeCheck(new Utils.ADT.MyDictionary<>());
-                PrgState prgState = new PrgState(new MyExeStack(), new MySymTbl(), new MyFileTbl(), new Heap(), new MyOut(), selectedProgram);
+                PrgState prgState = new PrgState(new MyExeStack(), new MySymTbl(), new MyFileTbl(), new Heap(), new MyOut(), new LockTable(), selectedProgram);
                 IRepository repo = new Repository(prgState, "log"+id+".txt");
                 Controller controller = new Controller(repo);
                 programExecutor.setController(controller);

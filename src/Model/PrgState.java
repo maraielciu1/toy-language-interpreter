@@ -39,6 +39,7 @@ public class PrgState {
     private IStmt originalProgram;
     private IMyFileTbl fileTable;
     private IHeap heap;
+    private ILockTable lockTable;
 
     public int getId() {
         return id;
@@ -47,20 +48,21 @@ public class PrgState {
     static int nextId=0;
     int id;
 
-    public PrgState(IMyExeStack stk, IMySymTbl symtbl,IMyFileTbl filetbl, IHeap hp,IMyOut ot, IStmt prg) {
+    public PrgState(IMyExeStack stk, IMySymTbl symtbl,IMyFileTbl filetbl, IHeap hp,IMyOut ot, ILockTable lktbl, IStmt prg) {
         exeStack = stk;
         id=this.nextId();
         symTable = symtbl;
         fileTable = filetbl;
         out = ot;
         heap = hp;
-        originalProgram = prg;
+        originalProgram = prg.deepCopy();
         stk.push(prg);
+        lockTable = lktbl;
     }
 
     @Override
     public String toString() {
-        return "Program id: "+ id +"\n"+"ExeStack: " + distinctStatamentsString() + "\nSymTable: " + symTable.toString() + "\nOut: " + out.toString() + "\nFileTable: "+fileTable.getFileTableList() + heap.toString();
+        return "Program id: "+ id +"\n"+"ExeStack: " + distinctStatamentsString() + "\nSymTable: " + symTable.toString() + "\nOut: " + out.toString() + "\nFileTable: "+fileTable.getFileTableList() + heap.toString() + "\nLockTable: " + lockTable.toString() + "\n";
     }
 
     public IMyFileTbl getFileTable() {
@@ -121,5 +123,16 @@ public class PrgState {
     static synchronized int nextId(){
         nextId++;
         return nextId;
+    }
+
+    public ILockTable getLockTable() {
+        return lockTable;
+    }
+
+    public String lockTableToString(){
+        StringBuilder result = new StringBuilder();
+        result.append("\nLockTable: ");
+        result.append(lockTable.toString());
+        return result.toString();
     }
 }
