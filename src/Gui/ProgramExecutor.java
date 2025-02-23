@@ -8,6 +8,7 @@ import Model.Value.Value;
 import Utils.ADT.MyException;
 import Utils.ADT.MyIDictionary;
 import Utils.State.IHeap;
+import Utils.State.ISemaphoreTeble;
 import Utils.State.MySymTbl;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -71,6 +72,19 @@ public class ProgramExecutor {
     @FXML
     private Button runOneStepButton;
 
+    @FXML
+    private TableView<Pair<Integer, Pair<Integer, List<Integer>>>> countSemaphoreTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, List<Integer>>>, String> semIndexColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, List<Integer>>>, String> semValueColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, List<Integer>>>, String> semListColumn;
+
+
     private PrgState getCurrentProgramState(){
         if(controller.getProgramStates().isEmpty())
             return null;
@@ -95,6 +109,10 @@ public class ProgramExecutor {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        semIndexColumn.setCellValueFactory(p->new SimpleStringProperty(p.getValue().first.toString()));
+        semValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.first.toString()));
+        semListColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.second.toString()));
+
     }
 
     public void populate(){
@@ -105,7 +123,26 @@ public class ProgramExecutor {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateSemTableView();
     }
+    private void populateSemTableView() {
+        PrgState programState = getCurrentProgramState();
+        if (programState == null) return;
+
+        ISemaphoreTeble semTbl = programState.getSemTbl();
+        ArrayList<Pair<Integer, Pair<Integer, List<Integer>>>> semTableEntries = new ArrayList<>();
+
+        for (Map.Entry<Integer, javafx.util.Pair<Integer, javafx.util.Pair<List<Integer>, Integer>>> entry : semTbl.getContent().entrySet()) {
+            Integer index = entry.getKey();
+            Integer value = entry.getValue().getKey();
+            List<Integer> list = entry.getValue().getValue().getKey();  // Corrected list retrieval
+            semTableEntries.add(new Pair<>(index, new Pair<>(value, list)));
+        }
+
+        countSemaphoreTableView.setItems(FXCollections.observableArrayList(semTableEntries));
+    }
+
+
 
     public void populateNumberProgramStates() {
         noOfPrgStates.setText(String.valueOf(controller.getProgramStates().size()));
