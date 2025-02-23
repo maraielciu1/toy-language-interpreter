@@ -9,6 +9,7 @@ import Utils.State.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Stack;
 
 public class PrgState {
     public IMyExeStack getExeStack() {
@@ -16,8 +17,10 @@ public class PrgState {
     }
 
     public IMySymTbl getSymTable() {
-        return symTable;
+        return symTables.peek();
     }
+
+    public Stack<IMySymTbl> getAllSymTables(){ return symTables;}
 
     public IMyOut getOut() {
         return out;
@@ -34,11 +37,13 @@ public class PrgState {
     public void setExeStack(IMyExeStack exeStack) { this.exeStack = exeStack; }
 
     private IMyExeStack exeStack;
-    private IMySymTbl symTable;
+    //private IMySymTbl symTable;
+    private Stack<IMySymTbl> symTables;
     private IMyOut out;
     private IStmt originalProgram;
     private IMyFileTbl fileTable;
     private IHeap heap;
+    private IProceduresTbl procTbl;
 
     public int getId() {
         return id;
@@ -47,20 +52,22 @@ public class PrgState {
     static int nextId=0;
     int id;
 
-    public PrgState(IMyExeStack stk, IMySymTbl symtbl,IMyFileTbl filetbl, IHeap hp,IMyOut ot, IStmt prg) {
+    public PrgState(IMyExeStack stk, IMySymTbl symtbl,IMyFileTbl filetbl, IHeap hp,IMyOut ot, IProceduresTbl ptbl, IStmt prg) {
         exeStack = stk;
         id=this.nextId();
-        symTable = symtbl;
+        symTables = new Stack<>();
+        symTables.push(symtbl);
         fileTable = filetbl;
         out = ot;
         heap = hp;
         originalProgram = prg;
+        procTbl=ptbl;
         stk.push(prg);
     }
 
     @Override
     public String toString() {
-        return "Program id: "+ id +"\n"+"ExeStack: " + distinctStatamentsString() + "\nSymTable: " + symTable.toString() + "\nOut: " + out.toString() + "\nFileTable: "+fileTable.getFileTableList() + heap.toString();
+        return "Program id: "+ id +"\n"+"ExeStack: " + distinctStatamentsString() + "\nSymTable: " + symTablesToString() + "\nOut: " + out.toString() + "\nFileTable: "+fileTable.getFileTableList() + heap.toString() + procTblToString();
     }
 
     public IMyFileTbl getFileTable() {
@@ -121,5 +128,31 @@ public class PrgState {
     static synchronized int nextId(){
         nextId++;
         return nextId;
+    }
+
+    public String symTablesToString(){
+        StringBuilder returnString = new StringBuilder();
+        if(symTables.empty())
+            return returnString.toString()+'\n';
+        Stack<IMySymTbl> stack = new Stack<>();
+        while(!symTables.empty()){
+            if(symTables.peek() instanceof IStmt)
+                returnString.append((symTables.peek()).toString()).append('\n');
+            else
+                returnString.append(symTables.peek().toString()).append('\n');
+            stack.push(symTables.pop());
+        }
+        while(!stack.empty()){
+            symTables.push(stack.pop());
+        }
+        return returnString.toString();
+    }
+
+    public IProceduresTbl getProcTbl() {
+        return procTbl;
+    }
+
+    public String procTblToString(){
+        return "\nProceduresTable: "+procTbl.toString();
     }
 }

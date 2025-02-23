@@ -26,6 +26,7 @@ import Repository.Repository;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProgramChooser {
@@ -36,6 +37,7 @@ public class ProgramChooser {
     @FXML
     private Button selectButton;
 
+    public ProceduresTbl proceduresTbl=new ProceduresTbl();
     @FXML
     private ObservableList<IStmt> getAllPrograms(){
         List<IStmt> allPrgs = new ArrayList<>();
@@ -217,6 +219,62 @@ public class ProgramChooser {
                         new CompStmt( new PrintStmt(new VarExp("v")), new AssignStmt("v", new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(3)))))  // Print v
                 ));
         allPrgs.add(ex11);
+
+        IStmt f1 = new CompStmt(new VarDeclStmt("v", new IntType()), new CompStmt(new AssignStmt("v", new ArithExp('+', new VarExp("a"), new VarExp("b"))), new PrintStmt(new VarExp("v"))));
+        IStmt f2 = new CompStmt(new VarDeclStmt("v", new IntType()), new CompStmt(new AssignStmt("v", new ArithExp('*', new VarExp("a"), new VarExp("b"))), new PrintStmt(new VarExp("v"))));
+
+        proceduresTbl.put("sum", new
+                javafx. util. Pair<>(Arrays.asList("a","b"), f1));
+        proceduresTbl.put("product", new
+                javafx. util. Pair<>(Arrays.asList("a","b"), f2));
+        //procedure sum(a,b) v=a+b;print(v) procedure product(a,b) v=a*b;print(v) and the main program is
+        //
+        //v=2;w=5;call sum(v*10,w);print(v);
+        //
+        //fork(call product(v,w); fork(call sum(v,w)))
+        IStmt ex12 = new CompStmt(
+                new VarDeclStmt("v", new IntType()),
+                new CompStmt(
+                        new AssignStmt("v", new ValueExp(new IntValue(2))),
+                        new CompStmt(
+                                new VarDeclStmt("w",new IntType()),
+                                new CompStmt(
+                                        new AssignStmt("w", new ValueExp(new IntValue(5))),
+                                        new CompStmt(
+                                                new FunctionCallStmt(
+                                                        "sum",
+                                                        Arrays.asList(
+                                                                new ArithExp('*', new VarExp("v"), new ValueExp(new IntValue(10))),
+                                                                new VarExp("w")
+                                                        )
+                                                ),
+                                                new CompStmt(
+                                                        new PrintStmt(new VarExp("v")),
+                                                        new CompStmt(
+                                                                new FunctionCallStmt(
+                                                                        "product",
+                                                                        Arrays.asList(
+                                                                                new VarExp("v"),
+                                                                                new VarExp("w")
+                                                                        )
+                                                                ),
+                                                                new ForkStmt(
+                                                                        new FunctionCallStmt(
+                                                                                "sum",
+                                                                                Arrays.asList(
+                                                                                        new VarExp("v"),
+                                                                                        new VarExp("w")
+                                                                                )
+                                                                        )
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+        allPrgs.add(ex12);
         return FXCollections.observableArrayList(allPrgs);
     }
 
@@ -243,7 +301,7 @@ public class ProgramChooser {
             int id=programListView.getSelectionModel().getSelectedIndex();
             try{
                 selectedProgram.typeCheck(new Utils.ADT.MyDictionary<>());
-                PrgState prgState = new PrgState(new MyExeStack(), new MySymTbl(), new MyFileTbl(), new Heap(), new MyOut(), selectedProgram);
+                PrgState prgState = new PrgState(new MyExeStack(), new MySymTbl(), new MyFileTbl(), new Heap(), new MyOut(),proceduresTbl, selectedProgram);
                 IRepository repo = new Repository(prgState, "log"+id+".txt");
                 Controller controller = new Controller(repo);
                 programExecutor.setController(controller);

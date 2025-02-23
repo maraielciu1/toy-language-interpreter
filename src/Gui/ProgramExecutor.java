@@ -8,6 +8,7 @@ import Model.Value.Value;
 import Utils.ADT.MyException;
 import Utils.ADT.MyIDictionary;
 import Utils.State.IHeap;
+import Utils.State.IProceduresTbl;
 import Utils.State.MySymTbl;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -71,6 +72,15 @@ public class ProgramExecutor {
     @FXML
     private Button runOneStepButton;
 
+    @FXML
+    private TableView<Pair<String, String>> procedureTableView;
+
+    @FXML
+    private TableColumn<Pair<String, String>, String> procedureNameColumn;
+
+    @FXML
+    private TableColumn<Pair<String, String>, String> procedureBodyColumn;
+
     private PrgState getCurrentProgramState(){
         if(controller.getProgramStates().isEmpty())
             return null;
@@ -95,6 +105,8 @@ public class ProgramExecutor {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        procedureNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
+        procedureBodyColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second));
     }
 
     public void populate(){
@@ -105,7 +117,20 @@ public class ProgramExecutor {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateProcTableView();
     }
+
+    public void populateProcTableView(){
+        PrgState programState = getCurrentProgramState();
+        IProceduresTbl procTbl = Objects.requireNonNull(programState).getProcTbl();
+        ArrayList<Pair<String, String>> procTableEntries = new ArrayList<>();
+        for(Map.Entry<String, javafx.util.Pair<List<String>, IStmt>> entry: procTbl.getContent().entrySet()){
+               procTableEntries.add(new Pair<>(entry.getKey()+" " +entry.getValue().getKey(), entry.getValue().getValue().toString()));
+            }
+        procedureTableView.setItems(FXCollections.observableArrayList(procTableEntries));
+
+    }
+
 
     public void populateNumberProgramStates() {
         noOfPrgStates.setText(String.valueOf(controller.getProgramStates().size()));
