@@ -8,6 +8,7 @@ import Model.Value.Value;
 import Utils.ADT.MyException;
 import Utils.ADT.MyIDictionary;
 import Utils.State.IHeap;
+import Utils.State.ILatchTable;
 import Utils.State.MySymTbl;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -71,6 +72,15 @@ public class ProgramExecutor {
     @FXML
     private Button runOneStepButton;
 
+    @FXML
+    private TableView<Pair<Integer, Integer>> latchTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, String> latchAddressColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, String> latchValueColumn;
+
     private PrgState getCurrentProgramState(){
         if(controller.getProgramStates().isEmpty())
             return null;
@@ -95,6 +105,8 @@ public class ProgramExecutor {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        latchAddressColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first.toString()));
+        latchValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
     }
 
     public void populate(){
@@ -105,6 +117,17 @@ public class ProgramExecutor {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateLatchTableView();
+    }
+
+    private void populateLatchTableView() {
+        PrgState prgState = getCurrentProgramState();
+        ILatchTable latchTable = Objects.requireNonNull(prgState).getLatchTable();
+        ArrayList<Pair<Integer, Integer>> latchTableEntries = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : latchTable.getContent().entrySet()) {
+            latchTableEntries.add(new Pair<>(entry.getKey(), entry.getValue()));
+        }
+        latchTableView.setItems(FXCollections.observableArrayList(latchTableEntries));
     }
 
     public void populateNumberProgramStates() {

@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="418.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProgramExecutor">
+<AnchorPane prefHeight="506.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProgramExecutor">
    <children>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="648.0">
+      <VBox alignment="CENTER" prefHeight="506.0" prefWidth="648.0">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0">
                <children>
@@ -48,7 +48,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="146.0" prefWidth="648.0">
                <children>
-                  <ListView fx:id="programStateIdentifiersListView" prefHeight="200.0" prefWidth="200.0" onMouseClicked="#changePrgState"/>
+                  <ListView fx:id="programStateIdentifiersListView" onMouseClicked="#changePrgState" prefHeight="200.0" prefWidth="200.0" />
                   <TableView fx:id="symbolTableView" prefHeight="130.0" prefWidth="200.0">
                     <columns>
                       <TableColumn fx:id="variableNameColumn" prefWidth="75.0" text="Name" />
@@ -56,6 +56,17 @@
                     </columns>
                   </TableView>
                   <ListView fx:id="exeStackListView" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="118.0" prefWidth="648.0">
+               <children>
+                  <Label text="CountDownLatch" />
+                  <TableView fx:id="latchTableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="latchAddressColumn" prefWidth="75.0" text="Address" />
+                      <TableColumn fx:id="latchValueColumn" prefWidth="75.0" text="Value" />
+                    </columns>
+                  </TableView>
                </children>
             </HBox>
             <Button fx:id="runOneStepButton" mnemonicParsing="false" onMouseClicked="#runOneStep" prefHeight="26.0" prefWidth="598.0" text="Run one step" />
