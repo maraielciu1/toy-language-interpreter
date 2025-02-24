@@ -11,7 +11,7 @@ This repository houses an interpreter for a custom-designed toy programming lang
 - **File Table**: Manages file operations during runtime.
 - **Out Table**: Collects and manages program output in an organized manner.
 
-Additionally, the interpreter supports advanced multithreading features. It can fork execution paths, and it implements various synchronization constructs—such as barriers, conditional latches, and semaphores—to manage complex concurrent operations. A GUI is also provided for real-time visualization and interactive debugging of these internal structures.
+Additionally, the interpreter supports advanced multithreading features. It can fork execution paths, and it implements various synchronization constructs—such as barriers, conditional latches, procedures and semaphores—to manage complex concurrent operations, depending on the branch you use. A GUI is also provided for real-time visualization and interactive debugging of these internal structures.
 
 ## Features
 
